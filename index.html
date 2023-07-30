@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deploying test</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+</head>
+<body>    
+    <div class="window glass active">
+        <div class="title-bar">
+            <div class="title-bar-text">My Deployed Page</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" disabled></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+    
+        <div class="window-body has-space">
+            <p>Welcome all to my deployed page. This page has all the epicness that one needs. It also has a form.</p>
+            <fieldset>
+                <legend>Complete the form</legend>
+                <label for="nameField">Name: </label>
+                <input type="text" id="nameField" placeholder="insert your name" name="name" />
+                <br>
+                <br>
+                <label for="ageRangeField">Favorite OS</label>
+                <div class="field-row">
+                    <input id="radio8" type="radio" name="fieldset-example2">
+                    <label for="radio8">Windows 98</label>
+                </div>
+                <div class="field-row">
+                    <input id="radio9" type="radio" name="fieldset-example2">
+                    <label for="radio9">Windows 7</label>
+                </div>
+                <div class="field-row">
+                    <input id="radio10" type="radio" name="fieldset-example2">
+                    <label for="radio10">Windows XP</label>
+                </div>
+                <div class="field-row">
+                    <input id="radio11" type="radio" name="fieldset-example2">
+                    <label for="radio11">Linux (Any distro. I use Arch BTW!)</label>
+                </div>
+                <br>
+                <ul role="menu" style="width: 200px">            
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                    Your age range
+                    <ul role="menu">
+                        <li role="menuitem">
+                            <input type="radio" name="icon-size" id="8" checked>
+                            <label for="8">8-13</label>
+                        </li>
+                        <li role="menuitem">
+                            <input type="radio" name="icon-size" id="14">
+                            <label for="14">14-18</label></li>
+                        <li role="menuitem">
+                            <input type="radio" name="icon-size" id="19">
+                            <label for="19">19-25</label></li>
+                        <li role="menuitem">
+                            <input type="radio" name="icon-size" id="26">
+                            <label for="26">26-35</label></li>
+                        <li role="menuitem">
+                            <input type="radio" name="icon-size" id="35">
+                            <label for="35">35+</label></li>
+                    </ul>
+                    </li>
+                </ul>
+                <br>
+            
+                <menu role="tablist">
+                    <button role="tab" aria-controls="music" aria-selected="true">Cats</button>
+                    <button role="tab" aria-controls="dogs">Dogs</button>
+                </menu>
+                <article role="tabpanel" id="music">
+                    <p>Cats are ok... but...dogs...</p>
+                </article>
+                <article role="tabpanel" hidden id="dogs">
+                    <p>Dogs are just great!</p>
+                </article>
+              
+                <button><a href="#dialog-demo">Send</a></button>
+                    <div class="window active is-bright" id="dialog-demo" role="dialog" aria-labelledby="dialog-title">
+                        <div class="title-bar">
+                            <div class="title-bar-text" id="dialog-title">Problem Diagnostics</div>
+                            <div class="title-bar-controls">
+                                <button aria-label="Close" onclick="history.back()"></button>
+                            </div>
+                        </div>
+                    <div class="window-body has-space">
+                        <h2 class="instruction instruction-primary">Identifying your problem...</h2>
+                        <div role="progressbar" class="marquee"></div>
+                    </div>
+                    <footer style="text-align: right">
+                        <button onclick="history.back()">Cancel</button>
+                    </footer>
+                    </div>
+            </fieldset>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">This is quite fun actually</p>
+            <p class="status-bar-field">just a small text in the footer</p>
+            <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
+    </div>
+</body>
+</html>
